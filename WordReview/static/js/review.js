@@ -84,37 +84,40 @@ function progressModify(oldRate, newRate) {
     let wholeWidth = $("#nav-progress").width();
     let $nps = $("#nav-progress").children();
 
-    $nps.eq(oldRateIndex * 2).css(
-      "width",
-      (parseFloat(
-        $.trim(
-          $nps
-            .eq(oldRateIndex * 2)
-            .css("width")
-            .replace("px", "")
-        )
-      ) /
-        wholeWidth) *
-        100 -
-        100 / wordArray.length +
-        "%"
-    );
+  try {
+      $nps.eq(oldRateIndex * 2).css(
+          "width",
+          (parseFloat(
+                  $.trim(
+                      $nps
+                          .eq(oldRateIndex * 2)
+                          .css("width")
+                          .replace("px", "")
+                  )
+              ) /
+              wholeWidth) *
+          100 -
+          100 / wordArray.length +
+          "%"
+      );
 
-    $nps.eq(newRateIndex * 2).css(
-      "width",
-      (parseFloat(
-        $.trim(
-          $nps
-            .eq(newRateIndex * 2)
-            .css("width")
-            .replace("px", "")
-        )
-      ) /
-        wholeWidth) *
-        100 +
-        100 / wordArray.length +
-        "%"
-    );
+      $nps.eq(newRateIndex * 2).css(
+          "width",
+          (parseFloat(
+                  $.trim(
+                      $nps
+                          .eq(newRateIndex * 2)
+                          .css("width")
+                          .replace("px", "")
+                  )
+              ) /
+              wholeWidth) *
+          100 +
+          100 / wordArray.length +
+          "%"
+      );
+    }
+    catch (e) {}
   }
 }
 

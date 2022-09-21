@@ -4,7 +4,7 @@ import configparser
 import os
 
 default_dict = {
-    'db_type': 'sqlite',
+    'db_type': 'mysql',
     'auto_open_browser': 'yes',
 }
 
