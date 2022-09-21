@@ -84,6 +84,7 @@ function progressModify(oldRate, newRate) {
     let wholeWidth = $("#nav-progress").width();
     let $nps = $("#nav-progress").children();
 
+  // 遇到新单词时，$nps.eq(oldRateIndex * 2).css("width") 是 undefined
   try {
       $nps.eq(oldRateIndex * 2).css(
           "width",

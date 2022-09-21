@@ -17,6 +17,7 @@ function copy2Clipboard(content, idN) {
 }
 
 function readText(word, source = 'baidu') {
+    // play() 函数有问题
     // if (source == 'baidu') {
     //     document.getElementById('bd-tts').innerHTML =
     //         '<audio id="bd-tts-audio" autoplay="autoplay">' +
